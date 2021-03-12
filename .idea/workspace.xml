@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="de1611bf-e5e6-479e-8205-dfd7c6402f78" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="1pY3JEpArOmRfg5AI2FZwpuUXiH" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="E:/ds/2.code/5.frontmobile/moralteach" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration name="demo.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/reveal.js/demo.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.demo.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="de1611bf-e5e6-479e-8205-dfd7c6402f78" name="Default Changelist" comment="" />
+      <created>1615346122432</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1615346122432</updated>
+      <workItem from="1615346123513" duration="35087000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1824" y="260" key="FileChooserDialogImpl" timestamp="1615431178628">
+      <screen x="1600" y="40" width="1920" height="1040" />
+    </state>
+    <state x="1824" y="260" key="FileChooserDialogImpl/0.40.1600.860/1600.40.1920.1040@1600.40.1920.1040" timestamp="1615431178628" />
+    <state x="1733" y="246" width="675" height="665" key="StructurePopup" timestamp="1615361804847">
+      <screen x="1600" y="40" width="1920" height="1040" />
+    </state>
+    <state x="1733" y="246" width="675" height="665" key="StructurePopup/0.40.1600.860/1600.40.1920.1040@1600.40.1920.1040" timestamp="1615361804847" />
+    <state x="1678" y="260" key="run.anything.popup" timestamp="1615427695867">
+      <screen x="1600" y="40" width="1920" height="1040" />
+    </state>
+    <state x="1678" y="260" key="run.anything.popup/0.40.1600.860/1600.40.1920.1040@1600.40.1920.1040" timestamp="1615427695867" />
+    <state x="1659" y="45" width="840" height="1034" key="search.everywhere.popup" timestamp="1615453358429">
+      <screen x="1600" y="40" width="1920" height="1040" />
+    </state>
+    <state x="1659" y="45" width="840" height="1034" key="search.everywhere.popup/0.40.1600.860/1600.40.1920.1040@1600.40.1920.1040" timestamp="1615453358429" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/js/main.js</url>
+          <line>22</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
