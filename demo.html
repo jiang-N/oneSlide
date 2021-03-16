@@ -20,7 +20,7 @@
     <!-- Theme used for syntax highlighting of code -->
     <link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="//at.alicdn.com/t/font_2411300_nzv6sso2iss.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_2411300_obxgaw5uq9r.css">
 </head>
 
 <body>
@@ -33,10 +33,16 @@
         <div class="tab active"><span class="iconfont icon-edit"></span>内容编辑</div>
         <div class="tab"><span class="iconfont icon-theme"></span>主题与特效</div>
         <div class="tab download"><span class="iconfont icon-download"></span>下载PDF</div>
+        <div class="tab"><span class="iconfont icon-speaker"></span>演讲者模式</div>
+        <div class="tab"><span class="iconfont icon-help"></span>语法规则</div>
         <div class="content active">
             <div class="header">编辑</div>
             <div class="body editor">
                 <textarea></textarea>
+                <div class="uploader">
+                    <input type="file" id="img-uploader" accept="image/*">
+                    <label for="img-uploader">点击此处上传图片(支持.png、.jpg、.gif，最大2M)</label>
+                </div>
                 <div>
                     <button class="button-save">保存</button>
                 </div>
@@ -116,6 +122,27 @@
                 <p>下载PDF</p>
             </div>
         </div>
+        <div class="content">
+            <div class="header">演讲者模式</div>
+            <div class="body">
+                <p>按下 <strong>"S"</strong> 键，开启演讲者模式</p>
+            </div>
+        </div>
+        <div class="content">
+            <div class="header">语法规则</div>
+            <div class="body help">
+                <p>首页，例: "# 这里是首页内容"</p>
+                <p>主页面，例: "## 这里是主页面内容"</p>
+                <p>子页面，例: "### 这里是子页面内容"</p>
+                <p>加粗，例: "**这是加粗的文字**"</p>
+                <p>斜体，例: "*这是倾斜的文字*"</p>
+                <p>斜体加粗，例: "***这是斜体加粗的文字***"</p>
+                <p>删除线，例: "~~这是加删除线的文字~~"</p>
+                <p>无序列表，例: "- 列表内容"</p>
+                <p>有序列表，例: "1. 列表内容  2. 列表内容  以此类推。。。"</p>
+                <p><a href="https://www.jianshu.com/p/191d1e21f7ed" target="_blank">查看更多规则</a></p>
+            </div>
+        </div>
     </div>
 </div>
 <div class="reveal">
@@ -125,6 +152,7 @@
 
 </div>
 
+<script src="//cdn.jsdelivr.net/npm/leancloud-storage@4.10.0/dist/av-min.js"></script>
 <script src="dist/reveal.js"></script>
 <script src="plugin/zoom/zoom.js"></script>
 <script src="plugin/notes/notes.js"></script>

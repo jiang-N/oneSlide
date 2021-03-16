@@ -111,7 +111,60 @@ const Menu = {
       this.$$contents.forEach($node => $node.classList.remove('active'))
       this.$$contents[index].classList.add('active')
     })
+    let lightTheme = ['beige', 'serif', 'simple', 'sky', 'solarized', 'white']
+    if (lightTheme.indexOf(localStorage.theme) >= 0) {
+      this.$settingIcon.classList.add('icon-light-mode')
+    }
   },
+}
+
+const ImgUploader = {
+  init() {
+    console.log('ImgUploader init...')
+    this.$fileInput = $('#img-uploader')
+    this.$textarea = $('.editor textarea')
+
+    AV.init({
+      appId: 'buMNiOHSXYCQXpL9wrUCrHOU-gzGzoHsz',
+      appKey: 'WbBmosIoM1kFSD51AtoTWu2r',
+      serverURL: 'https://bumniohs.lc-cn-n1-shared.com'
+    })
+
+    this.bind()
+  },
+  bind() {
+    let self = this
+    this.$fileInput.onchange = function () {
+      if (this.files.length > 0) {
+        let localFile = this.files[0]
+        if (localFile.size / 1048576 > 2) {
+          alert('文件不能超过2M')
+          return
+        }
+        self.insertText(`![上传中，进度0%]()`)
+        let avFile = new AV.File(encodeURI(localFile.name), localFile)
+        avFile.save({
+          keepFileName: true,
+          onprogress(progress) {
+            self.insertText(`![上传中，进度${progress.percent}%]()`)
+          }
+        }).then(file => {
+          let text = `![${file.attributes.name}](${file.attributes.url}?imageView2/0/w/800/h/400)`
+          self.insertText(text)
+        }).catch(err => console.log(err))
+      }
+    }
+  },
+  insertText(text = '') {
+    let $textarea = this.$textarea
+    let start = $textarea.selectionStart
+    let end = $textarea.selectionEnd
+    let oldText = $textarea.value
+
+    $textarea.value = `${oldText.substring(0, start)}${text} ${oldText.substring(end)}`
+    $textarea.focus()
+    $textarea.setSelectionRange(start, start + text.length)
+  }
 }
 
 const Editor = {
@@ -176,6 +229,8 @@ const Theme = {
     }
   },
   setTheme(theme) {
+    console.log(theme)
+
     localStorage.theme = theme
     location.reload()
   },
@@ -203,9 +258,10 @@ const Print = {
   },
   bind() {
     this.$download.addEventListener('click', () => {
+      let href = location.href
       let $link = document.createElement('a')
       $link.setAttribute('target', '_blank')
-      $link.setAttribute('href', location.href.replace(/#\/.+/, '?print-pdf'))
+      $link.setAttribute('href', location.pathname + '?print-pdf')
       $link.click()
     })
   },
@@ -227,4 +283,4 @@ const App = {
     [...arguments].forEach(Module => Module.init())
   }
 }
-App.init(Menu, Editor, Theme, Print)
+App.init(Menu, ImgUploader, Editor, Theme, Print)
